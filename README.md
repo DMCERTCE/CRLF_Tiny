@@ -6,8 +6,10 @@ A CRLF vulnerability (%0D%0A) exists in TinyWeb Server creating a potential risk
 This vulnerability also leads to integrity failure, as logfiles can be spoofed:
 
 Example:
-http://localhost/%20HTTP/1.1"%0A8.8.8.8%20-%20-%20[12/May/2024:06:51:01 +0200]%20"POST%20/fakenews.html
-Results in access_log in application directory:
+![image](https://github.com/DMCERTCE/CRLF_Tiny/assets/168325622/d32648f9-866a-4793-bc09-bcd6011af630)
+
+Resulting events in access_log stored in application directory:
+
 ![image](https://github.com/DMCERTCE/CRLF_Tiny/assets/168325622/5a899a48-4bb5-4df8-8016-7b0db04fbeb3)
 Same most likely evident for agent_ and referer_ logs etc.
 
